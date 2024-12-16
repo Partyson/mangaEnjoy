@@ -1,6 +1,8 @@
-﻿namespace mangaEnjoy.Controllers;
+﻿using Microsoft.AspNetCore.Mvc;
 
-public class MangaController
+namespace mangaEnjoy.Controllers;
+
+public class MangaController : ControllerBase
 {
     
 }
