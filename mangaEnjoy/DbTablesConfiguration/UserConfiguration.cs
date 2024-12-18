@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace mangaEnjoy;
+namespace mangaEnjoy.DbTablesConfiguration;
 
 public class UserConfiguration : IEntityTypeConfiguration<UserEntity>
 {

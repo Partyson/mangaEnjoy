@@ -37,7 +37,7 @@ public class AuthController : ControllerBase
     }
     
     [HttpGet("get-user-id")]
-    public ActionResult<Guid> GetUserIdFromToken()
+    public async Task<ActionResult<Guid>> GetUserIdFromToken()
     {
         var userId =  User.FindFirstValue(ClaimTypes.NameIdentifier);
         return Ok(Guid.Parse(userId));

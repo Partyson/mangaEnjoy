@@ -18,6 +18,9 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddScoped<IUserRepository, UserRepository>();
+        builder.Services.AddScoped<IUserService, UserService>();
+        builder.Services.AddScoped<IMangaService, MangaService>();
+        builder.Services.AddScoped<IMangaRepository, MangaRepository>();
         builder.Services.AddScoped<IAuthService, AuthService>();
         builder.Services.AddScoped<IJwtProvider, JwtProvider>();
         

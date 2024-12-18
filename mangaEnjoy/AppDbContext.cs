@@ -1,4 +1,5 @@
-﻿using mangaEnjoy.Entities;
+﻿using mangaEnjoy.DbTablesConfiguration;
+using mangaEnjoy.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace mangaEnjoy;

@@ -15,5 +15,11 @@ public class MappingConfig
             .NewConfig()
             .Map(dest => dest.PasswordHash, src => PasswordHasher.HashPassword(src.Password, salt))
             .Map(dest => dest.PasswordSalt, src => Convert.ToBase64String(salt));
+        TypeAdapterConfig<UserEntity, UserResponseDto>
+            .NewConfig()
+            .Map(dest => dest.Username, src => src.Username)
+            .Map(dest => dest.AddedMangas, 
+                src => src.AddedManga.Select(x => x.ApiId).ToList())
+            .IgnoreNonMapped(true);
     }
 }
